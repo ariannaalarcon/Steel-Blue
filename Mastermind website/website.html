@@ -5,15 +5,18 @@
 
 <body>
     <script>
-        var playerChoices = []
-        var computerChoices = []
+        playerChoices = []
+        computerChoices = []
         const colors = ["red", "yellow", "blue", "green", "orange", "purple"]
 
         function startGame() {
             for (let i = 0; i < 4; i++) {
-                computerChoices.push(colors[Math.floor(Math.random() * colors.length)])
+                computerChoices.push(colors[Math.floor(Math.random()*colors.length)])
             }
         }
+        alert(colors[1])
+
+        startGame()
         alert(computerChoices[1])
     </script>
     <p>Press R for red, B for blue, O for orange, G for green, P for purple
