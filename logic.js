@@ -45,11 +45,25 @@ $(document).keyup(function(key) {
         }
     }
     if (guess == " ") {
-        $("#playerStuff").append($("<p>").text(playerChoices.join(" ")));
+        var pins = [];
         
         if (playerChoices.join('') == computerChoices.join('')) {
             alert("win");
         }
+        else {
+            for (var i = 0; i < playerChoices.length; i++) {
+                if (playerChoices[i] == computerChoices[i]) {
+                    pins.push('b');
+                }
+            }
+            for (var i = 0; i < playerChoices.length; i++) {
+                if (computerChoices.includes(playerChoices[i]) && !(playerChoices[i] == computerChoices[i])) {
+                    pins.push('w');
+                }
+            }
+        }
+
+        $("#playerStuff").append($("<p>").text(playerChoices.join(" ") + "         " + pins.join(" ")));
 
         playerChoices = [];
         currentGuess = "";
