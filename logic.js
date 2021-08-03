@@ -11,34 +11,31 @@ startGame();
 
 $(document).keyup(function(key) {
     guess = key.key;
-    var play = $("#playerStuff");
     if (guess == 'r'){
-        play.append(guess + " ");
         playerChoices.push(guess);
     }
     else if(guess == 'b'){
-        play.append(guess + " ");
         playerChoices.push(guess);
     }
     else if(guess == 'o'){
-        play.append(guess + " ");
         playerChoices.push(guess);
     }
     else if(guess == 'p'){
-        play.append(guess + " ");
         playerChoices.push(guess);
     }
     else if(guess == 'y'){
-        play.append(guess + " ");
         playerChoices.push(guess);
     }
     else if(guess == 'g'){
-        play.append(guess + " ");
         playerChoices.push(guess);
     }
     else if (guess == " ") {
+        $("#playerStuff").append($("<p>").text(playerChoices.join(" ")));
+        
         if (playerChoices.join('') == computerChoices.join('')) {
             alert("win");
         }
+
+        playerChoices = [];
     }
 });
