@@ -46,19 +46,29 @@ $(document).keyup(function(key) {
     }
     if (guess == " ") {
         var pins = [];
+        var tempPlayerChoices = playerChoices.join('').split('');
+        var tempComputerChoices = computerChoices.join('').split('');
         
         if (playerChoices.join('') == computerChoices.join('')) {
             alert("win");
+            computerChoices = [];
+            startGame();
         }
         else {
-            for (var i = 0; i < playerChoices.length; i++) {
-                if (playerChoices[i] == computerChoices[i]) {
+            for (var i = 0; i < tempPlayerChoices.length; i++) {
+                if (tempPlayerChoices[i] == tempComputerChoices[i]) {
                     pins.push('b');
+                    tempPlayerChoices.splice(i, 1);
+                    tempComputerChoices.splice(i, 1);
+                    i--;
                 }
             }
-            for (var i = 0; i < playerChoices.length; i++) {
-                if (computerChoices.includes(playerChoices[i]) && !(playerChoices[i] == computerChoices[i])) {
+            for (var i = 0; i < tempPlayerChoices.length; i++) {
+                if (tempComputerChoices.includes(tempPlayerChoices[i])) {
                     pins.push('w');
+                    tempPlayerChoices.splice(i, 1);
+                    tempComputerChoices.splice(tempComputerChoices.indexOf(tempPlayerChoices[i]), 1);
+                    i--;
                 }
             }
         }
