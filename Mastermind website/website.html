@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <script>
+        var playerChoices = []
+        var computerChoices = []
+        const colors = ["red", "yellow", "blue", "green", "orange", "purple"]
+
+        function startGame() {
+            for (let i = 0; i < 4; i++) {
+                computerChoices.push(colors[Math.floor(Math.random() * colors.length)])
+            }
+        }
+        alert(computerChoices[1])
+    </script>
+    <p>Press R for red, B for blue, O for orange, G for green, P for purple
+        or Y for yellow.  Once you've typed 4 letters, the computer 
+        will tell you how many you got right. </p>
+</body>
