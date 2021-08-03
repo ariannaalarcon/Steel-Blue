@@ -1,6 +1,7 @@
 var playerChoices = [];
 var computerChoices = [];
 var colors = ["r", "y", "b", "g", "o", "p"];
+var currentGuess = "";
 
 function startGame() {
     for (var i = 0; i < 4; i++) {
@@ -11,25 +12,39 @@ startGame();
 
 $(document).keyup(function(key) {
     guess = key.key;
-    if (guess == 'r'){
-        playerChoices.push(guess);
+    if (!(playerChoices.length >= 4)) {
+        if (guess == 'r'){
+            playerChoices.push(guess);
+            currentGuess += guess + " ";
+            $("#current").text(currentGuess);
+        }
+        else if(guess == 'b'){
+            playerChoices.push(guess);
+            currentGuess += guess + " ";
+            $("#current").text(currentGuess);
+        }
+        else if(guess == 'o'){
+            playerChoices.push(guess);
+            currentGuess += guess + " ";
+            $("#current").text(currentGuess);
+        }
+        else if(guess == 'p'){
+            playerChoices.push(guess);
+            currentGuess += guess + " ";
+            $("#current").text(currentGuess);
+        }
+        else if(guess == 'y'){
+            playerChoices.push(guess);
+            currentGuess += guess + " ";
+            $("#current").text(currentGuess);
+        }
+        else if(guess == 'g'){
+            playerChoices.push(guess);
+            currentGuess += guess + " ";
+            $("#current").text(currentGuess);
+        }
     }
-    else if(guess == 'b'){
-        playerChoices.push(guess);
-    }
-    else if(guess == 'o'){
-        playerChoices.push(guess);
-    }
-    else if(guess == 'p'){
-        playerChoices.push(guess);
-    }
-    else if(guess == 'y'){
-        playerChoices.push(guess);
-    }
-    else if(guess == 'g'){
-        playerChoices.push(guess);
-    }
-    else if (guess == " ") {
+    if (guess == " ") {
         $("#playerStuff").append($("<p>").text(playerChoices.join(" ")));
         
         if (playerChoices.join('') == computerChoices.join('')) {
@@ -37,5 +52,7 @@ $(document).keyup(function(key) {
         }
 
         playerChoices = [];
+        currentGuess = "";
+        $("#current").text(currentGuess);
     }
 });
