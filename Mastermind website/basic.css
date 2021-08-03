@@ -1,0 +1,17 @@
+.circle {
+    height: 30px;
+    width: 30px;
+    background-color: #555;
+    border-radius: 50%;
+    position: fixed;
+    right: 100;
+  }
+
+.circle {
+    height: 30px;
+    width: 30px;
+    background-color: #555;
+    border-radius: 50%;
+    position: fixed;
+    right: 50;
+}
