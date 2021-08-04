@@ -1,0 +1,68 @@
+.color_1F2833 {
+    background-color:#1F2833;
+}
+
+.color_0B0C10 {
+    background-color:#0B0C10;
+}
+
+.color_66FCF1 {
+    background-color:#66FCF1;
+}
+
+.center_text {
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.credits_button {
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    height: 45px;
+    width: 45px;
+    background-color: #66FCF1;
+    border-color: #66FCF1;
+    border-width: 5px;
+    border-style:outset
+}
+
+.top_bar {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    height: 80px;
+    width: 1920px;
+}
+
+.mastermind_logo {
+    position: absolute;
+    color:#66FCF1;
+    left: 50%;
+    transform: translate(-50%);
+    top: 10px;
+    font-family: monospace;
+    font-size: 40px;
+}
+
+.credit_list {
+    position: absolute;
+    color:#45D29E;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: monospace;
+    font-size: 50px;
+}
+
+.rainbow_text {
+    -webkit-animation: random 5s infinite;
+    animation: random 5s infinite;
+}
+@keyframes  random {
+   15% { color: red; } 
+   30% { color: yellow; } 
+   45% { color: green; } 
+   60% { color: blue; }
+   75% { color: white; }  
+}
