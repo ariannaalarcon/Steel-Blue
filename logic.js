@@ -5,9 +5,8 @@ var currentGuess = "";
 
 function startGame() {
     for (var i = 0; i < 4; i++) {
-        //computerChoices.push(colors[Math.floor(Math.random() * colors.length)]);
+        computerChoices.push(colors[Math.floor(Math.random() * colors.length)]);
     }
-    computerChoices = ["p", "b", "g", "o"];
 }
 startGame();
 
@@ -62,12 +61,6 @@ $(document).keyup(function(key) {
                     tempPlayerChoices.splice(i, 1);
                     tempComputerChoices.splice(i, 1);
                     i--;
-
-                    console.log(playerChoices);
-                    console.log(computerChoices);
-                    console.log();
-                    console.log(tempPlayerChoices);
-                    console.log(tempComputerChoices);
                 }
             }
             for (var i = 0; i < tempPlayerChoices.length; i++) {
@@ -76,12 +69,6 @@ $(document).keyup(function(key) {
                     tempComputerChoices.splice(tempComputerChoices.indexOf(tempPlayerChoices[i]), 1);
                     tempPlayerChoices.splice(i, 1);
                     i--;
-
-                    console.log(playerChoices);
-                    console.log(computerChoices);
-                    console.log();
-                    console.log(tempPlayerChoices);
-                    console.log(tempComputerChoices);
                 }
             }
         }
