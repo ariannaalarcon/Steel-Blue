@@ -73,8 +73,8 @@ $(document).keyup(function(key) {
             }
         }
 
-        $("#playerStuff").append($("<p>").text(playerChoices.join(" ") + "         " + pins.join(" ")));
-
+        $("#playerStuff").append($("<p>").text(playerChoices.join(" ")));
+        
         playerChoices = [];
         currentGuess = "";
         $("#current").text(currentGuess);
