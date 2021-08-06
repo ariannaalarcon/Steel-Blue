@@ -6,3 +6,41 @@ h1 {
 body {
     text-align: center;
 }
+
+.circle1 {
+    height: 25px;
+    width: 25px;
+    background-color: black;
+    border-radius: 50%;
+    top:50%;
+    left: 75%;
+    display: inline-block;
+}
+
+.circle2 {
+    height: 25px;
+    width: 25px;
+    background-color: black;
+    border-radius: 50%;
+    top:50%;
+    left: 50%;
+    display: inline-block;
+}
+.circle3 {
+    height: 25px;
+    width: 25px;
+    background-color: black;
+    border-radius: 50%;
+    left: 25%;
+    top: 50%;
+    display: inline-block;
+}
+.circle4 {
+    position: fixed;
+    height: 25px;
+    width: 25px;
+    background-color: black;
+    border-radius: 50%;
+    left: 53%;
+    display: inline-block;
+}

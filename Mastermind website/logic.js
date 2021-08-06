@@ -17,17 +17,8 @@ $(document).keyup(function(key) {
             playerChoices.push(guess);
             currentGuess += guess + " ";
             $("#current").text(currentGuess);
-            if (playerChoices.length == 1){
-                $(".circle1").css("background-color", "red")
-            }
-            else if (playerChoices.length == 2) {
-                $(".circle2").css("background-color", "red")
-            }
-            else if (playerChoices.length == 3) {
-                $(".circle3").css("background-color", "red")
-            }
-            else if (playerChoices.length == 4) {
-                $(".circle4").css("background-color", "red")
+            if (playerChoices.length == 1) {
+                $("#circle1").css("background color", "red")
             }
         }
         else if(guess == 'b'){
@@ -85,10 +76,14 @@ $(document).keyup(function(key) {
             }
         }
 
-        $("#playerStuff").append($("<p>").text(playerChoices.join(" ")));
-        
+        $("#playerStuff").append($("<p>").text(playerChoices.join(" ") + "         " + pins.join(" ")));
+
         playerChoices = [];
         currentGuess = "";
         $("#current").text(currentGuess);
     }
+});
+
+$("#credits_button").on("click", function() {
+    window.location.href = "credit_page.html";
 });
