@@ -55,6 +55,11 @@
     font-size: 50px;
 }
 
+.container {
+    position: fixed;
+    top: 200px;
+}
+
 .rainbow_text {
     -webkit-animation: random 5s infinite;
     animation: random 5s infinite;
