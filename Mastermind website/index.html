@@ -5,28 +5,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="color_1F2833">
             
     <div class="top_bar color_0B0C10">
         <h1 class="center_text mastermind_logo">Mastermind</h1>
     </div>
         
-
-
-
-    <p id="introstuff">Press R for red, B for blue, O for orange, G for green, P for purple
-            or Y for yellow.  Once you've typed 4 letters, the computer 
-            will tell you how many you got right.   <span id="current"></span>      
-    </p>
-
-
-
-    <div id="playerStuff">
-        
-    </div>
     <img src="content/bars.png" class="credits_button" id="credits_button">
 
     
-    <script src="logic.js"></script>
+    <script>
+
+        var playerChoices = []
+        var computerChoices = []
+        const colors = ["red", "yellow", "blue", "green", "orange", "purple"]
+
+        function startGame() {
+            for (let i = 0; i < 4; i++) {
+                computerChoices.push(colors[Math.floor(Math.random() * colors.length)])
+                alert(computerChoices[1])
+            }
+        }
+
+        // Take the person to the Credits Page
+        $("#credits_button").on("click", function() {
+            window.location.href = "credit_page.html";
+        });
+    </script>
 
 </body>

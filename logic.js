@@ -144,10 +144,21 @@ $(document).keyup(function(key) {
                 }
             }
         }
+        for (var i = 0; i < pins.length; i++) {
+            if (pins[i] == "b") {
+                $("correctanswer" + i.toString()).css("background-color", "black")
+            }
+            else if(pins[i] == "w") {
+                $("correctAnswer" + i.toString()).css("background-color", "white")
+            }
+            else {
+                $("correctAnswer"+ i.toString()).css("background-color", "grey")
+            }
+        }
         
 
         $("#playerStuff").append($("<p>").text(playerChoices.join(" ")));
-        
+        console.log(pins.join(" "))
         playerChoices = [];
         currentGuess = "";
         $("#current").text(currentGuess);
