@@ -45,6 +45,17 @@
     font-size: 40px;
 }
 
+.introstuff {
+    font-family:'Roboto', sans-serif;
+    font-weight:400;
+    line-height:27px;
+    color:#333;
+    width:350px;
+    height:250px;
+    margin:auto;
+}
+
+
 .credit_list {
     position: absolute;
     color:#45D29E;
@@ -55,10 +66,29 @@
     font-size: 50px;
 }
 
+.container {
+    position: fixed;
+    top: 200px;
+}
+
 .rainbow_text {
     -webkit-animation: random 5s infinite;
     animation: random 5s infinite;
 }
+
+.circle {
+    position: fixed;
+    height: 25px;
+    width: 25px;
+    background-color: grey;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#row2 {
+    padding-top: 50px;
+}
+
 @keyframes  random {
    15% { color: red; } 
    30% { color: yellow; } 
