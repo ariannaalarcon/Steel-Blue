@@ -13,45 +13,46 @@
         
     <img src="content/bars.png" class="credits_button" id="credits_button">
 
+    <h1>Mastermind</h1>
+    <p id>Press R for red, B for blue, O for orange, G for green, P for purple
+        or Y for yellow.  Once you've typed 4 letters, hit the space key and the computer 
+        will tell you how many you got right.          <span id="current"></span></p>
+
+    <div id="playerStuff">
+        
+    </div>
+    <script src="logic.js"></script>
+
     <div class="container">
-        <!--Row with two equal columns-->
         <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-3"></div>
-            <div class="col-md-3"></div>
-            <div class="col-md-3"></div>
+            <div class="col-md-2">
+                <div class="circle" id="1"></div>
+            </div>
+            <div class="col-md-2">
+                <div class="circle" id="2"></div>
+            </div>
+            <div class="col-md-2">
+                <div class="circle" id="3"></div>
+            </div>
+            <div class="col-md-2">
+                <div class="circle" id="4"></div>
+            </div>
         </div>
-        <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-3"></div>
-            <div class="col-md-3"></div>
-            <div class="col-md-3"></div>
+        <div class="row" id="row2">
+            <div class="col-md-2">
+                <div class="circle" id="5"></div>
+            </div>
+            <div class="col-md-2">
+                <div class="circle" id="6"></div>
+            </div>
+            <div class="col-md-2">
+                <div class="circle" id="7"></div>
+            </div>
+            <div class="col-md-2">
+                <div class="circle" id="8"></div>
+            </div>
         </div>
-        <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-3"></div>
-            <div class="col-md-3"></div>
-            <div class="col-md-3"></div>
-        </div>
-        </div>
-    
-    <script>
 
-        var playerChoices = []
-        var computerChoices = []
-        const colors = ["red", "yellow", "blue", "green", "orange", "purple"]
-
-        function startGame() {
-            for (let i = 0; i < 4; i++) {
-                computerChoices.push(colors[Math.floor(Math.random() * colors.length)])
-                alert(computerChoices[1])
-            }
-        }
-
-        // Take the person to the Credits Page
-        $("#credits_button").on("click", function() {
-            window.location.href = "credit_page.html";
-        });
-    </script>
+    </div>
 
 </body>

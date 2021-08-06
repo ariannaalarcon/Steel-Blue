@@ -18,16 +18,16 @@ $(document).keyup(function(key) {
             currentGuess += guess + " ";
             $("#current").text(currentGuess);
             if (playerChoices.length == 1){
-                $(".circle1").css("background-color", "red")
+                $("#1").css("background-color", "red")
             }
             else if (playerChoices.length == 2) {
-                $(".circle2").css("background-color", "red")
+                $("#2").css("background-color", "red")
             }
             else if (playerChoices.length == 3) {
-                $(".circle3").css("background-color", "red")
+                $("#3").css("background-color", "red")
             }
             else if (playerChoices.length == 4) {
-                $(".circle4").css("background-color", "red")
+                $("#4").css("background-color", "red")
             }
         }
         else if(guess == 'b'){
@@ -35,16 +35,16 @@ $(document).keyup(function(key) {
             currentGuess += guess + " ";
             $("#current").text(currentGuess);
             if (playerChoices.length == 1){
-                $(".circle1").css("background-color", "blue")
+                $("#1").css("background-color", "blue")
             }
             else if (playerChoices.length == 2) {
-                $(".circle2").css("background-color", "blue")
+                $("#2").css("background-color", "blue")
             }
             else if (playerChoices.length == 3) {
-                $(".circle3").css("background-color", "blue")
+                $("#3").css("background-color", "blue")
             }
             else if (playerChoices.length == 4) {
-                $(".circle4").css("background-color", "blue")
+                $("#4").css("background-color", "blue")
             }
         }
         else if(guess == 'o'){
@@ -52,16 +52,16 @@ $(document).keyup(function(key) {
             currentGuess += guess + " ";
             $("#current").text(currentGuess);
             if (playerChoices.length == 1){
-                $(".circle1").css("background-color", "orange")
+                $("#1").css("background-color", "orange")
             }
             else if (playerChoices.length == 2) {
-                $(".circle2").css("background-color", "orange")
+                $("#2").css("background-color", "orange")
             }
             else if (playerChoices.length == 3) {
-                $(".circle3").css("background-color", "orange")
+                $("#3").css("background-color", "orange")
             }
             else if (playerChoices.length == 4) {
-                $(".circle4").css("background-color", "orange")
+                $("#4").css("background-color", "orange")
             }
         }
         else if(guess == 'p'){
@@ -69,16 +69,16 @@ $(document).keyup(function(key) {
             currentGuess += guess + " ";
             $("#current").text(currentGuess);
             if (playerChoices.length == 1){
-                $(".circle1").css("background-color", "purple")
+                $("#1").css("background-color", "purple")
             }
             else if (playerChoices.length == 2) {
-                $(".circle2").css("background-color", "purple")
+                $("#2").css("background-color", "purple")
             }
             else if (playerChoices.length == 3) {
-                $(".circle3").css("background-color", "purple")
+                $("#3").css("background-color", "purple")
             }
             else if (playerChoices.length == 4) {
-                $(".circle4").css("background-color", "purple")
+                $("#4").css("background-color", "purple")
             }
         }
         else if(guess == 'y'){
@@ -86,16 +86,16 @@ $(document).keyup(function(key) {
             currentGuess += guess + " ";
             $("#current").text(currentGuess);
             if (playerChoices.length == 1){
-                $(".circle1").css("background-color", "yellow")
+                $("#1").css("background-color", "yellow")
             }
             else if (playerChoices.length == 2) {
-                $(".circle2").css("background-color", "yellow")
+                $("#2").css("background-color", "yellow")
             }
             else if (playerChoices.length == 3) {
-                $(".circle3").css("background-color", "yellow")
+                $("#3").css("background-color", "yellow")
             }
             else if (playerChoices.length == 4) {
-                $(".circle4").css("background-color", "yellow")
+                $("#4").css("background-color", "yellow")
             }
         }
         else if(guess == 'g'){
@@ -103,16 +103,16 @@ $(document).keyup(function(key) {
             currentGuess += guess + " ";
             $("#current").text(currentGuess);
             if (playerChoices.length == 1){
-                $(".circle1").css("background-color", "green")
+                $("#1").css("background-color", "green")
             }
             else if (playerChoices.length == 2) {
-                $(".circle2").css("background-color", "green")
+                $("#2").css("background-color", "green")
             }
             else if (playerChoices.length == 3) {
-                $(".circle3").css("background-color", "green")
+                $("#3").css("background-color", "green")
             }
             else if (playerChoices.length == 4) {
-                $(".circle4").css("background-color", "green")
+                $("#4").css("background-color", "green")
             }
         }
     }
@@ -144,20 +144,10 @@ $(document).keyup(function(key) {
                 }
             }
         }
-        for (var i = 4; i < pins.length; i++) {
-            if (pins[i] == "b") {
-                $(i.toString()).css("background-color", "black")
-            }
-            else if(pins[i] == "w") {
-                $(i.toString()).css("background-color", "white")
-            }
-            else {
-                $(i.toString()).css("background-color", "grey")
-            }
-        }
+        
         
 
-        $("#playerStuff").append($("<p>").text(playerChoices.join(" ")));
+       $("#playerStuff").append($("<p>").text(playerChoices.join(" ") + "         " + pins.join(" ")));
         console.log(pins.join(" "))
         playerChoices = [];
         currentGuess = "";

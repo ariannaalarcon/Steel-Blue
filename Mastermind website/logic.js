@@ -17,34 +17,103 @@ $(document).keyup(function(key) {
             playerChoices.push(guess);
             currentGuess += guess + " ";
             $("#current").text(currentGuess);
-            if (playerChoices.length == 1) {
-                $("#circle1").css("background color", "red")
+            if (playerChoices.length == 1){
+                $("#1").css("background-color", "red")
+            }
+            else if (playerChoices.length == 2) {
+                $("#2").css("background-color", "red")
+            }
+            else if (playerChoices.length == 3) {
+                $("#3").css("background-color", "red")
+            }
+            else if (playerChoices.length == 4) {
+                $("#4").css("background-color", "red")
             }
         }
         else if(guess == 'b'){
             playerChoices.push(guess);
             currentGuess += guess + " ";
             $("#current").text(currentGuess);
+            if (playerChoices.length == 1){
+                $("#1").css("background-color", "blue")
+            }
+            else if (playerChoices.length == 2) {
+                $("#2").css("background-color", "blue")
+            }
+            else if (playerChoices.length == 3) {
+                $("#3").css("background-color", "blue")
+            }
+            else if (playerChoices.length == 4) {
+                $("#4").css("background-color", "blue")
+            }
         }
         else if(guess == 'o'){
             playerChoices.push(guess);
             currentGuess += guess + " ";
             $("#current").text(currentGuess);
+            if (playerChoices.length == 1){
+                $("#1").css("background-color", "orange")
+            }
+            else if (playerChoices.length == 2) {
+                $("#2").css("background-color", "orange")
+            }
+            else if (playerChoices.length == 3) {
+                $("#3").css("background-color", "orange")
+            }
+            else if (playerChoices.length == 4) {
+                $("#4").css("background-color", "orange")
+            }
         }
         else if(guess == 'p'){
             playerChoices.push(guess);
             currentGuess += guess + " ";
             $("#current").text(currentGuess);
+            if (playerChoices.length == 1){
+                $("#1").css("background-color", "purple")
+            }
+            else if (playerChoices.length == 2) {
+                $("#2").css("background-color", "purple")
+            }
+            else if (playerChoices.length == 3) {
+                $("#3").css("background-color", "purple")
+            }
+            else if (playerChoices.length == 4) {
+                $("#4").css("background-color", "purple")
+            }
         }
         else if(guess == 'y'){
             playerChoices.push(guess);
             currentGuess += guess + " ";
             $("#current").text(currentGuess);
+            if (playerChoices.length == 1){
+                $("#1").css("background-color", "yellow")
+            }
+            else if (playerChoices.length == 2) {
+                $("#2").css("background-color", "yellow")
+            }
+            else if (playerChoices.length == 3) {
+                $("#3").css("background-color", "yellow")
+            }
+            else if (playerChoices.length == 4) {
+                $("#4").css("background-color", "yellow")
+            }
         }
         else if(guess == 'g'){
             playerChoices.push(guess);
             currentGuess += guess + " ";
             $("#current").text(currentGuess);
+            if (playerChoices.length == 1){
+                $("#1").css("background-color", "green")
+            }
+            else if (playerChoices.length == 2) {
+                $("#2").css("background-color", "green")
+            }
+            else if (playerChoices.length == 3) {
+                $("#3").css("background-color", "green")
+            }
+            else if (playerChoices.length == 4) {
+                $("#4").css("background-color", "green")
+            }
         }
     }
     if (guess == " ") {
@@ -64,6 +133,7 @@ $(document).keyup(function(key) {
                     tempPlayerChoices.splice(i, 1);
                     tempComputerChoices.splice(i, 1);
                     i--;
+                    
                 }
             }
             for (var i = 0; i < tempPlayerChoices.length; i++) {
@@ -83,6 +153,7 @@ $(document).keyup(function(key) {
         $("#current").text(currentGuess);
     }
 });
+
 
 $("#credits_button").on("click", function() {
     window.location.href = "credit_page.html";
