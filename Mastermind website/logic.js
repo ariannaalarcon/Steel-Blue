@@ -133,7 +133,18 @@ $(document).keyup(function(key) {
                     tempPlayerChoices.splice(i, 1);
                     tempComputerChoices.splice(i, 1);
                     i--;
-                    
+                    if (pins.length==1){
+                        $("#5").css("background-color", "black")
+                    }
+                    else if (pins.length==2){
+                        $("#6").css("background-color", "black")
+                    }
+                    else if (pins.length==3){
+                        $("#7").css("background-color", "black")
+                    }
+                    else if (pins.length==4){
+                        $("#8").css("background-color", "black")
+                    }
                 }
             }
             for (var i = 0; i < tempPlayerChoices.length; i++) {
@@ -142,6 +153,18 @@ $(document).keyup(function(key) {
                     tempComputerChoices.splice(tempComputerChoices.indexOf(tempPlayerChoices[i]), 1);
                     tempPlayerChoices.splice(i, 1);
                     i--;
+                    if (pins.length==1){
+                        $("#5").css("background-color", "white")
+                    }
+                    else if (pins.length==2){
+                        $("#6").css("background-color", "white")
+                    }
+                    else if (pins.length==3){
+                        $("#7").css("background-color", "white")
+                    }
+                    else if (pins.length==4){
+                        $("#8").css("background-color", "white")
+                    }
                 }
             }
         }
