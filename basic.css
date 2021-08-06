@@ -7,92 +7,11 @@ body {
     text-align: center;
 }
 
-.circle1 {
+.circle {
     position: fixed;
     height: 25px;
     width: 25px;
     background-color: black;
     border-radius: 50%;
-    left: 350px;
-    display: inline-block;
-}
-
-.circle2 {
-    position: fixed;
-    height: 25px;
-    width: 25px;
-    background-color: black;
-    border-radius: 50%;
-    left: 400px;
-    display: inline-block;
-}
-.circle3 {
-    position: fixed;
-    height: 25px;
-    width: 25px;
-    background-color: black;
-    border-radius: 50%;
-    left: 450px;
-    display: inline-block;
-}
-.circle4 {
-    position: fixed;
-    height: 25px;
-    width: 25px;
-    background-color: black;
-    border-radius: 50%;
-    left: 500px;
-    display: inline-block;
-}
-
-.correctAnswer1 {
-    position: fixed;
-    height: 25px;
-    width: 25px;
-    background-color: grey;
-    border-style: solid;
-    border-color: black;
-    border-width: 2px;
-    border-radius: 50%;
-    left: 550px;
-    display: inline-block;
-}
-
-.correctAnswer2 {
-    position: fixed;
-    height: 25px;
-    width: 25px;
-    background-color: grey;
-    border-style: solid;
-    border-color: black;
-    border-width: 2px;
-    border-radius: 50%;
-    left: 580px;
-    display: inline-block;
-}
-
-.correctAnswer3 {
-    position: fixed;
-    height: 25px;
-    width: 25px;
-    background-color: grey;
-    border-style: solid;
-    border-color: black;
-    border-width: 2px;
-    border-radius: 50%;
-    left: 610px;
-    display: inline-block;
-}
-
-.correctAnswer4 {
-    position: fixed;
-    height: 25px;
-    width: 25px;
-    background-color: grey;
-    border-style: solid;
-    border-color: black;
-    border-width: 2px;
-    border-radius: 50%;
-    left: 640px;
     display: inline-block;
 }
